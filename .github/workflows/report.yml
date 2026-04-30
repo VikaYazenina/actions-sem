@@ -17,3 +17,13 @@ jobs:
       # TODO:
       # 1. Запусти bash-скрипт scripts/create-summary.sh
       # 2. Сохрани файл build/reports/seminar-summary.txt как artifact
+
+      
+      - name: Execute script to create report summary
+        run: bash scripts/create-summary.sh
+      - name: Upload seminar summary artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: seminar-report-summar
+          path: build/reports/seminar-summary.txt
+        
