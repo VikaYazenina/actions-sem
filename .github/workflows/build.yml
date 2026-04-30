@@ -49,7 +49,7 @@ jobs:
       # 2. Добавь шаг, который запускает тесты командой gradle test.
       # 3. Добавь событие pull_request.
       # 4. Добавь отдельную job, которая срабатывает только при открытии pull request.
-      - name: Setup Gradle
+      - name: 
         run: chmod +x gradlew
-      - name: Run tests
+      - name: 
         run: ./gradlew test
