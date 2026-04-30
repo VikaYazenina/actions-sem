@@ -2,6 +2,12 @@ name: Build and Test
 
 on:
   push:
+    
+    
+  pull_request:
+    
+    
+
   workflow_dispatch:
 
 jobs:
@@ -23,3 +29,7 @@ jobs:
       # 2. Добавь шаг, который запускает тесты командой gradle test.
       # 3. Добавь событие pull_request.
       # 4. Добавь отдельную job, которая срабатывает только при открытии pull request.
+      - name: Setup Gradle
+        run: chmod +x gradlew
+      - name: Run tests
+        run: ./gradlew test
