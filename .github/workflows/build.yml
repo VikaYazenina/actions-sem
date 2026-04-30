@@ -11,7 +11,27 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  test_push:
+    runs-on: ubuntu-latest
+  
+    
+    steps:
+      - name: Download repository files
+        uses: actions/checkout@v4
+
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Gradle
+        run: chmod +x gradlew
+      - name: Run tests
+        run: ./gradlew test
+
+    
+  test_pull:
     runs-on: ubuntu-latest
 
     steps:
