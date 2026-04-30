@@ -16,3 +16,7 @@ jobs:
       # TODO:
       # 1. Добавь шаг, который выводит приветствие для inputs.student_name
       # 2. Попробуй дополнительно вывести номер запуска: GITHUB_RUN_NUMBER
+      - name: Say hello to student # Название для человека
+        run: echo "Привет, ${{ inputs.student_name }}!
+      - name: Display run number # Название для человека
+        run: echo "Номер этого запуска: ${{ github.run_number }}"
