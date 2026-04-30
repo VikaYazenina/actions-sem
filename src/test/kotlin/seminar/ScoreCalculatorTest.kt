@@ -11,6 +11,7 @@ class ScoreCalculatorTest {
     @Test
     fun `totalPoints adds homework and bonus points`() {
         assertEquals(70, calculator.totalPoints(60, 10))
+        println("completed")
     }
 
     @Test
@@ -42,4 +43,5 @@ class ScoreCalculatorTest {
     fun `grade returns 2 for failing score`() {
         assertEquals("2", calculator.grade(20))
     }
+    
 }
